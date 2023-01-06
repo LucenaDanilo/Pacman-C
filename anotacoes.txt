@@ -1,0 +1,58 @@
+A linguagem C é uma linguagem antiga e que nos permite bastante domínio da memória
+
+Sempre que eu vou declarar uma variável eu chamo seu tipo, são algumas opções:
+    - char (string de 1 caractere);
+    - int
+    - float
+    - double
+
+Quando eu vou receber um valor, seja de um arquivo ou do usuário
+eu entrego o PONTEIRO da variavel
+
+ex:
+    int valor;
+    scanf("%d", &valor);
+
+Estou passando o ponteiro da variavel valor que receberá seu valor
+pelo input do usuário.
+
+-----------------------------------------------------------------------------------------
+
+Arrays em C
+
+Para iniciar um array em C, que irá receber uma palavra
+eu posso fazer algo do tipo:
+
+    char palavra[15];
+
+Estou separando um espaço na memória para 15 char's
+se cada um ocupa 1 byte, então estou separando 15 bytes.
+
+Por baixo dos panos, um array será um ponteiro que apontará para estes espaços
+na memória, então:
+
+    char* palavra[15] -> apontará para 15 espaços na memória;
+
+------------------------------------------------------------------------------------------
+
+Em C, existe uma função built-in chamada "malloc", que vem de memory allocation
+que é responsável por reservar de maneira dinâmica espaços na memória do nosso PC
+
+Para que isso é util?
+    para quando não sabemos antes de inicar o programa o tamanho da variável ou 
+    quantidade de variáveis que serão usadas.
+
+------------------------------------------------------------------------------------------
+
+Existe uma palavra reservada em C chamada: "struct" que é uma espécie de "Class"...
+a struct vai agregar vários atributos e tipos para instanciar um novo "tipo de objeto"
+tornando as coisas coesas, exemplo:
+
+    struct mapa {
+        char** matriz; 
+        int linhas;
+        int colunas;
+    };
+
+Também é possível usar a função typedef para dar um apelido a uma struct
+    typedef struct mapa MAPA;   
